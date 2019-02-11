@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+  	<ion-buttons slot='start'>
+  		<ion-menu-button></ion-menu-button>
+  	</ion-buttons>
+    <ion-title>pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<img src="../../assets/pokemon.jpg">
+	<ion-button (click)='getPokemon()'> Clique em Mim!</ion-button>
+	<ion-list>
+		<li *ngFor="let p of pokemons">
+			<ion-item>
+				<h2>{{ p.name }}</h2>
+			</ion-item>
+		</li>
+	</ion-list>
+
+</ion-content>
